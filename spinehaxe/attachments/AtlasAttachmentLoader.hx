@@ -111,7 +111,9 @@ class AtlasAttachmentLoader implements AttachmentLoader {
 		return new BoundingBoxAttachment(name);
 	}
 
-	static public function nextPOT (value:Int) : Int {
+	inline static public function nextPOT (value:Int) : Int {
+		return value;
+		/*
 		value--;
 		value |= value >> 1;
 		value |= value >> 2;
@@ -119,5 +121,6 @@ class AtlasAttachmentLoader implements AttachmentLoader {
 		value |= value >> 8;
 		value |= value >> 16;
 		return value + 1;
+		*/
 	}
 }
